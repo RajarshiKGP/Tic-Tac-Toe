@@ -19,6 +19,8 @@ const checkWin = () => {
     ].forEach(e => {
         if (boxtext[e[0]].innerHTML !== "" && (boxtext[e[0]].innerHTML === boxtext[e[1]].innerHTML) && (boxtext[e[1]].innerHTML === boxtext[e[2]].innerHTML)) {
             document.querySelector('.info').innerHTML = `${boxtext[e[0]].innerHTML} has won`;
+            document.querySelector('.msg').innerHTML = "Click restart to play again";
+            document.querySelector('#reset').innerHTML = "Restart";
             gameOver = true;
         }
     })
@@ -28,7 +30,7 @@ let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(box => {
     let b = box.querySelector(".boxtext");
     box.addEventListener("click", () => {
-        if (b.innerHTML == "") {
+        if (b.innerHTML == "" && !gameOver) {
             b.innerHTML = turn;
             turn = changeTurn();
             checkWin();
@@ -46,4 +48,6 @@ reset.addEventListener('click', () => {
     turn = 'X';
     gameOver = false;
     document.querySelector('.info').innerHTML = `Turn of ${turn}`;
+    document.querySelector('#reset').innerHTML = "Reset";
+    document.querySelector('.msg').innerHTML = "";
 })

@@ -63,6 +63,10 @@ nav img {
   line-height: 60px;
 }
 
+.msg {
+    font-size: x-large;
+}
+
 .info {
   font-family: "Righteous", cursive;
   font-size: x-large;
