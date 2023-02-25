@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Anek+Latin:wght@500&family=Dancing+Script:wght@700&family=Gloock&family=Heebo&family=Kalam&family=Kolker+Brush&family=Lobster&family=Mynerve&family=Peralta&family=Poppins:ital@1&family=Rubik+Moonrocks&family=Rubik:wght@400;600&family=Silkscreen&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Anek+Latin:wght@500&family=Dancing+Script:wght@700&family=Gloock&family=Heebo&family=Kalam&family=Kolker+Brush&family=Lobster&family=Mynerve&family=Peralta&family=Poppins:ital@1&family=Rubik+Moonrocks&family=Rubik:wght@400;600&family=Silkscreen&family=Tilt+Prism&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Anek+Latin:wght@500&family=Dancing+Script:wght@700&family=Gloock&family=Heebo&family=Kalam&family=Kolker+Brush&family=Lobster&family=Mynerve&family=Peralta&family=Poppins:ital@1&family=Righteous&family=Rubik+Moonrocks&family=Rubik:wght@400;600&family=Silkscreen&family=Tilt+Prism&family=Titan+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("./resources/bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+nav {
+  background-color: #f5785f;
+  width: 100%;
+  height: 47px;
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  height: inherit;
+}
+
+.contents {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: "Mynerve", cursive;
+}
+
+.box {
+  border: 2px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover {
+  background-color: rgb(249, 200, 249);
+}
+
+.gameInfo {
+  padding: 50px;
+  text-align: center;
+}
+
+.gameInfo div {
+  display: flex;
+  flex-flow: column;
+  line-height: 60px;
+}
+
+.info {
+  font-family: "Righteous", cursive;
+  font-size: x-large;
+}
+
+.gameInfo h2 {
+  font-family: "Tilt Prism", cursive;
+  color: #0087ff;
+  margin-bottom: 20px;
+  font-size: xx-large;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #45e403;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #7db005;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover:before {
+  width: 100%;
+}
